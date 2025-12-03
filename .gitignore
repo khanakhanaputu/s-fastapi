@@ -12,3 +12,10 @@ venv/
 # OS junk
 .DS_Store
 Thumbs.db
+
+# Abaikan database lokal (JANGAN UPLOAD DATA USER KE GITHUB!)
+*.db
+*.sqlite3
+
+# Abaikan folder settingan VS Code (Opsional, tapi disarankan)
+.vscode/
