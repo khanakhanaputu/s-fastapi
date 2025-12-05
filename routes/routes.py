@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from database.database import fake_db
-from 
+from controllers.ItemController import Item
 
 router = APIRouter()
 
@@ -20,6 +20,15 @@ async def blog(id: int, comment: str):
 def get_item():
     return fake_db
 
+
 @router.post("/tambah")
-async def tambah_menu():
-    pass
+async def tambah_menu(item: Item):
+    fake_db.update({{"name": item.name, "price": item.price}})
+    return fake_db
+
+
+# @router.put("/ubah/{item_name}")
+# async def ubah_menu(item_name: str):
+#     for i in fake_db:
+#         if fake_db["name"] == item_name:
+#             fake_db["name"] = item_name

@@ -7,4 +7,4 @@ from sqlmodel import create_engine, SQLModel
 #     print("creating table...")
 #     SQLModel.metadata.create_all(engine)
 
-fake_db = {"biji", "ayam"}
+fake_db = {{"name": "ayam bakar", "price": 20000}}
